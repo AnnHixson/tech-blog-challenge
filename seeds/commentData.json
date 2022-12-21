@@ -1,0 +1,17 @@
+[
+    {
+        "content": "Controllers connect the front end and the back end.",
+        "user_id": 1,
+        "blog_post_id": 3
+    },
+    {
+        "content": "Models are hot. LOL!",
+        "user_id": 3,
+        "blog_post_id": 1
+    },
+    {
+        "content": "that's not helpful @Real_Person",
+        "user_id": 2,
+        "blog_post_id": 3
+    }
+]

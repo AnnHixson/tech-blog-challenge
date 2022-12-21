@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Models",
+        "content": "Models are used to make tables for the database.",
+        "user_id": 1
+    },
+    {
+        "title": "Views",
+        "content": "Views are used to display the page.",
+        "user_id": 1
+    },
+    {
+        "title": "Controllers",
+        "content": "Controllers are used for video games.",
+        "user_id": 3
+    }
+]
