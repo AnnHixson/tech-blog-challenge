@@ -44,5 +44,5 @@ document
   
 document
     .querySelector('.blog-post-list')
-    .addEventListener('click', delButtonHandler);
+    // .addEventListener('click', delButtonHandler);
   
