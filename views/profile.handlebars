@@ -23,11 +23,10 @@
     </form>
   </div>
 
-  {{#if blogPosts.length}}
+  {{!-- {{#if blogposts.length}} --}}
   <div class="col-md-6 blog-post-list">
     <h3>Current Posts:</h3>
-
-    {{#each blogPosts as |blogPost|}}
+    {{#each user.blogPosts as |blogPost|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/blogpost/{{blogPost.id}}">{{blogPost.title}}</a></h4>
@@ -38,7 +37,7 @@
     </div>
     {{/each}}
   </div>
-  {{/if}}
+  {{!-- {{/if}} --}}
 </div>
 
 <script src="./js/profile.js"></script>
