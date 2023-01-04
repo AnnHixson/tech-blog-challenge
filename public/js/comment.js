@@ -1,12 +1,10 @@
-console.log(`/api/blogposts/${blogPost.id}`)
 const newFormHandler = async (event) => {
     event.preventDefault();
   
     const content = document.querySelector('#comment-content').value.trim();
   
     if (content) {
-      console.log(`/api/blogposts/${id}`)
-      const response = await fetch(`/api/blogposts/${id}`, {
+      const response = await fetch(`/api/comments`, {
         method: 'POST',
         body: JSON.stringify({ content }),
         headers: {
@@ -15,7 +13,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace(`/blogposts/${id}`);
+        document.location.reload();
       } else {
         alert('Failed to create comment');
       }

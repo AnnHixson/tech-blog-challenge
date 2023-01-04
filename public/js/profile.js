@@ -22,22 +22,23 @@ const newFormHandler = async (event) => {
     }
 };
 
-const displayPosts = async () => {
-  const response = await fetch(`/api/blogposts`, {
-        method: 'GET',
-        body: JSON.stringify({ title, content }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+// const displayPosts = async () => {
+//   const response = await fetch(`/api/blogposts`, {
+//         method: 'GET',
+//         body: JSON.stringify({ title, content }),
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//       });
   
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to create blog post');
-      }
+//       if (response.ok) {
+//         document.location.replace('/profile');
+//       } else {
+//         alert('Failed to create blog post');
+//       }
     
-}
+// }
+// displayPosts()
 
 const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
