@@ -36,36 +36,4 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// router.get('/blogposts/:id', async (req, res) => {
-//   try {
-//     const blogPostData = await BlogPost.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//         {
-//             model: Comment,
-//             attributes: ['content'],
-//             include: [
-//                 {
-//                     model: User,
-//                     attributes: ['name']
-//                 }
-//             ]
-//         }
-//       ],
-//     });
-
-//     const blogpost = blogPostData.get({ plain: true });
-
-//     res.render('blogpost', {
-//       ...blogpost,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 module.exports = router;

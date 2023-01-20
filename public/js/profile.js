@@ -22,45 +22,27 @@ const newFormHandler = async (event) => {
     }
 };
 
-// const displayPosts = async () => {
-//   const response = await fetch(`/api/blogposts`, {
-//         method: 'GET',
-//         body: JSON.stringify({ title, content }),
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
+// const delButtonHandler = async (event) => {
+//     if (event.target.hasAttribute('data-id')) {
+//       const id = event.target.getAttribute('data-id');
+  
+//       const response = await fetch(`/api/blogposts/${id}`, {
+//         method: 'DELETE',
 //       });
   
 //       if (response.ok) {
 //         document.location.replace('/profile');
 //       } else {
-//         alert('Failed to create blog post');
+//         alert('Failed to delete blog post');
 //       }
-    
-// }
-// displayPosts()
-
-const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/blogposts/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete blog post');
-      }
-    }
-};
+//     }
+// };
   
 document
     .querySelector('.new-blog-post-form')
     .addEventListener('submit', newFormHandler);
   
-document
-    .querySelector('.blog-post-list')
-    // .addEventListener('click', delButtonHandler);
+// document
+//     .querySelector('.blog-post-list')
+//     .addEventListener('click', delButtonHandler);
   

@@ -1,7 +1,15 @@
 <section class="card">
-    <header>{{user.name}}</header>
+    <header>Posted on {{format_date createdAt}}</header>
     <div class="card-body">
-        <p>{{title}}</p>
+      <h2 id="current-posts-links">
+        <a href="/blogpost/{{id}}">{{title}}</a>
+      </h2>
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <a href="/edit/{{id}}" id="editButton"><button class="btn btn-sm btn-danger">EDIT</button></a>
+        </div>
+      </div>
     </div>
-  </a>
 </section>
+
+

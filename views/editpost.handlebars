@@ -1,0 +1,36 @@
+<div class="row mt-4">
+  <div class="col-md-12 blog-post-list">
+    <h3>Edit Blog Post "{{blogPost.title}}":</h3>
+
+    <form class="form update-blog-post-form">
+      <div class="form-group">
+        <label for="blog-post-title">post title:</label>
+        <input class="form-input" type="text" id="blog-post-title" name="blog-post-title" value="{{blogPost.title}}" />
+      </div>
+      <div class="form-group">
+        <label for="blog-post-content">content:</label>
+        <textarea class="form-input" id="blog-post-content" name="blog-post-content">{{blogPost.content}}</textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="updateButton">Update</button>
+        <button type="submit" class="btn btn-primary" id="deleteButton" data-id="{{blogPost.id}}">Delete</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<p id="blogPostId">{{blogPostId}}</p>
+
+<div id="commentsToHide">
+  <h3>Comments</h3>
+  {{#each comments as |comment|}}
+    <section class="card">
+      <header>{{user.name}} ({{format_date createdAt}}) {{blog_post_id}} {{id}}</header>
+        <div class="card-body">
+          <p>{{content}}</p>
+        </div>
+    </section>
+  {{/each}}
+</div>
+
+<script src="/js/editpost.js"></script>

@@ -32,7 +32,19 @@ header, .blogPost:not(:last-child) {
 .blog-post-user {
   text-decoration: underline;
 }
-.blog-post-content {}
-.blog-comment {}
-.blog-comment-content {}
-.blog-comment-user {}
+
+#editButton {
+  color: black
+}
+
+#editButton:hover {
+  text-decoration: none;
+}
+
+#current-posts-links a {
+  color: black;
+}
+
+#current-posts-links a:hover {
+  color:#2d3e50;
+}
